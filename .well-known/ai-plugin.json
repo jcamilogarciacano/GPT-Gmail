@@ -15,7 +15,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://yourdomain.com/openapi.yaml"
+    "url": "https://github.com/jcamilogarciacano/GPT-Gmail/blob/main/openapi.yaml"
   },
   "logo_url": "https://yourdomain.com/logo.png",
   "contact_email": "youremail@domain.com",
