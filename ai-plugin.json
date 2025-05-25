@@ -1,0 +1,21 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "google_calendar_bot",
+  "name_for_human": "Google Calendar Bot",
+  "description_for_model": "Create calendar events for the user using their Google Calendar.",
+  "description_for_human": "Create and manage meetings on your Google Calendar.",
+  "auth": {
+    "type": "oauth",
+    "client_url": "https://accounts.google.com/o/oauth2/auth",
+    "authorization_url": "https://accounts.google.com/o/oauth2/auth",
+    "token_url": "https://oauth2.googleapis.com/token",
+    "scopes": ["https://www.googleapis.com/auth/calendar.events"]
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://yourdomain.com/openapi.yaml"
+  },
+  "logo_url": "https://yourdomain.com/logo.png",
+  "contact_email": "you@yourdomain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
+}
