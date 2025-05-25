@@ -1,4 +1,4 @@
-openapi: 3.0.1
+openapi: 3.1.0
 info:
   title: Google Calendar Action
   version: 1.0.0
@@ -14,10 +14,19 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Event'
+              $ref: "#/components/schemas/Event"
       responses:
-        '200':
+        "200":
           description: Event created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  htmlLink:
+                    type: string
       security:
         - OAuth2: [https://www.googleapis.com/auth/calendar.events]
 components:
@@ -33,6 +42,10 @@ components:
   schemas:
     Event:
       type: object
+      required:
+        - summary
+        - start
+        - end
       properties:
         summary:
           type: string
@@ -40,6 +53,9 @@ components:
           type: string
         start:
           type: object
+          required:
+            - dateTime
+            - timeZone
           properties:
             dateTime:
               type: string
@@ -48,6 +64,9 @@ components:
               type: string
         end:
           type: object
+          required:
+            - dateTime
+            - timeZone
           properties:
             dateTime:
               type: string
@@ -58,6 +77,8 @@ components:
           type: array
           items:
             type: object
+            required:
+              - email
             properties:
               email:
                 type: string
