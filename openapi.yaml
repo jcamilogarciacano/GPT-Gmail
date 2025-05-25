@@ -1,0 +1,63 @@
+openapi: 3.0.1
+info:
+  title: Google Calendar Action
+  version: 1.0.0
+servers:
+  - url: https://www.googleapis.com/calendar/v3
+paths:
+  /calendars/primary/events:
+    post:
+      operationId: createEvent
+      summary: Create a calendar event
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Event'
+      responses:
+        '200':
+          description: Event created
+      security:
+        - OAuth2: [https://www.googleapis.com/auth/calendar.events]
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://accounts.google.com/o/oauth2/auth
+          tokenUrl: https://oauth2.googleapis.com/token
+          scopes:
+            https://www.googleapis.com/auth/calendar.events: Manage calendar events
+  schemas:
+    Event:
+      type: object
+      properties:
+        summary:
+          type: string
+        description:
+          type: string
+        start:
+          type: object
+          properties:
+            dateTime:
+              type: string
+              format: date-time
+            timeZone:
+              type: string
+        end:
+          type: object
+          properties:
+            dateTime:
+              type: string
+              format: date-time
+            timeZone:
+              type: string
+        attendees:
+          type: array
+          items:
+            type: object
+            properties:
+              email:
+                type: string
