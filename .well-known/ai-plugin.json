@@ -1,21 +1,23 @@
 {
   "schema_version": "v1",
-  "name_for_model": "google_calendar_bot",
-  "name_for_human": "Google Calendar Bot",
-  "description_for_model": "Create calendar events for the user using their Google Calendar.",
-  "description_for_human": "Create and manage meetings on your Google Calendar.",
+  "name_for_model": "gmail_calendar_event_creator",
+  "name_for_human": "Gmail Calendar Event Creator",
+  "description_for_model": "Create and manage events in the user's Google Calendar.",
+  "description_for_human": "Schedule meetings and manage your calendar using Google Calendar.",
   "auth": {
     "type": "oauth",
-    "client_url": "https://accounts.google.com/o/oauth2/auth",
     "authorization_url": "https://accounts.google.com/o/oauth2/auth",
     "token_url": "https://oauth2.googleapis.com/token",
-    "scopes": ["https://www.googleapis.com/auth/calendar.events"]
+    "client_url": "https://accounts.google.com/o/oauth2/auth",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.events"
+    ]
   },
   "api": {
     "type": "openapi",
-    "url": "https://jcamilogarciacano.github.io/GPT-Gmail/openapi.yaml"
+    "url": "https://yourdomain.com/openapi.yaml"
   },
-  "logo_url": "https://jcamilogarciacano.github.io/GPT-Gmail/logo.png",
-  "contact_email": "juancamigarcia@gmail.com",
-  "legal_info_url": "https://jcamilogarciacano.github.io/GPT-Gmail/privacy"
+  "logo_url": "https://yourdomain.com/logo.png",
+  "contact_email": "youremail@domain.com",
+  "legal_info_url": "https://yourdomain.com/legal"
 }
