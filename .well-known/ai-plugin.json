@@ -13,7 +13,7 @@
   },
   "api": {
     "type": "openapi",
-    "url": "https://yourdomain.com/openapi.yaml"
+    "url": "https://jcamilogarciacano.github.io/GPT-Gmail/openapi.yaml"
   },
   "logo_url": "https://yourdomain.com/logo.png",
   "contact_email": "you@yourdomain.com",
