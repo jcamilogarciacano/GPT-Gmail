@@ -15,7 +15,7 @@
     "type": "openapi",
     "url": "https://jcamilogarciacano.github.io/GPT-Gmail/openapi.yaml"
   },
-  "logo_url": "https://yourdomain.com/logo.png",
-  "contact_email": "you@yourdomain.com",
-  "legal_info_url": "https://yourdomain.com/legal"
+  "logo_url": "https://jcamilogarciacano.github.io/GPT-Gmail/logo.png",
+  "contact_email": "juancamigarcia@gmail.com",
+  "legal_info_url": "https://jcamilogarciacano.github.io/GPT-Gmail/privacy"
 }
