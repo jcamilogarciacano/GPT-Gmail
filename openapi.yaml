@@ -1,3 +1,4 @@
+
 openapi: 3.1.0
 info:
   title: Google Calendar Action
@@ -9,6 +10,8 @@ paths:
     post:
       operationId: createEvent
       summary: Create a calendar event
+      x-openai-isConsequential: true
+      x-openai-response-format: "json"
       requestBody:
         required: true
         content:
@@ -27,8 +30,13 @@ paths:
                     type: string
                   htmlLink:
                     type: string
+                  summary:
+                    type: string
+                  status:
+                    type: string
       security:
-        - OAuth2: [https://www.googleapis.com/auth/calendar.events]
+        - OAuth2:
+            - https://www.googleapis.com/auth/calendar.events
 components:
   securitySchemes:
     OAuth2:
